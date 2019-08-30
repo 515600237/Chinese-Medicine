@@ -1,0 +1,44 @@
+warning: LF will be replaced by CRLF in src/views/studentHome/homepage/showList/deaseOperList.vue.
+The file will have its original line endings in your working directory
+[1mdiff --git a/src/views/studentHome/homepage/showList/deaseOperList.vue b/src/views/studentHome/homepage/showList/deaseOperList.vue[m
+[1mindex 48f8593..e203d02 100644[m
+[1m--- a/src/views/studentHome/homepage/showList/deaseOperList.vue[m
+[1m+++ b/src/views/studentHome/homepage/showList/deaseOperList.vue[m
+[36m@@ -47,7 +47,7 @@[m
+             :finished="finished"[m
+             :finished-text="deaseList.length != 0 ? '没有更多了' : ''"[m
+             :error.sync="error"[m
+[31m-            error-text="请求失败"[m
+[32m+[m[32m            error-text=""[m
+             @load="onLoad"[m
+           >[m
+             <div v-for="(item,index) in deaseList" :key="index">[m
+[36m@@ -157,7 +157,7 @@[m
+             :finished="finished1"[m
+             :finished-text="operateList.length != 0?'没有更多了': ''"[m
+             :error.sync="error1"[m
+[31m-            error-text="请求失败"[m
+[32m+[m[32m            error-text=""[m
+             @load="onLoad1"[m
+           >[m
+             <div v-for="(item,index) in operateList" :key="index">[m
+[36m@@ -466,8 +466,8 @@[m [mexport default {[m
+         method: "POST",[m
+         data: postJson,[m
+         success: res => {[m
+[32m+[m[32m          this.loading= false;[m
+           if (res.code == 0) {[m
+[31m-            this.loading= false;[m
+             this.page = res.data.page + 1;[m
+             if (res.data.result) {[m
+               this.deaseAttach = res.data.attach;[m
+[36m@@ -512,8 +512,8 @@[m [mexport default {[m
+         method: "POST",[m
+         data: postJson,[m
+         success: res => {[m
+[32m+[m[32m          this.loading1= false;[m
+           if (res.code == 0) {[m
+[31m-            this.loading1= false;[m
+             this.page1 = res.data.page + 1;[m
+             if (flag || flag1) {[m
+               this.operateList = res.data.result;[m
